@@ -16,6 +16,12 @@
 1. 完成基本的 `.cls` `.bib` 文件，规范冯如杯格式与引用
 2. 提供一些简单的 trick
 
+## 使用平台
+
+测试平台为 Manjaro 网络安装 TeX Live 2020 ，基于 `xelatex` 与 `bibtex`。
+
 ## License
+
+本项目采用 BSD 3-Clause License .
 
 
