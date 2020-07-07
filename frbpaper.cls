@@ -260,7 +260,7 @@
 % 页眉设置
 
 \RequirePackage{fancyhdr}
-\newcommand{\makeabstract}{\pagenumbering{roman}}
+\newcommand{\makeabstract}{\pagenumbering{roman}\songti}
 
 \newcommand{\makemain}{\pagenumbering{arabic}\setcounter{page}{1}\renewcommand{\headrulewidth}{0.4pt}\pagestyle{fancy}
 \fancyhead[C]{\xiaowu\songti\the\headofpaper
