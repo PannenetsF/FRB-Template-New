@@ -180,6 +180,7 @@
 
 % 字号设置
 \renewcommand{\normalsize}{\xiaosi}
+\renewcommand{\footnotesize}{\wuhao}
 
 % 数学字体
 \RequirePackage{newtxtext}

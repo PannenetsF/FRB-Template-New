@@ -14,6 +14,7 @@
 
 \maketitle
 
+
 \makeabstract
 
 \section*{摘要}
@@ -89,7 +90,7 @@ With China aviation pioneer Mr Fung Joe guey named Beijing university of aeronau
 对于文献引用使用 \lstinline{\cite}，这句话引用一些炼丹的论文 \cite{ghostnet,parashar2017scnn,park2017scale,abok}，之后需要通过 \hologo{XeLaTeX} + \hologo{BibTeX} * 2 + \hologo{XeLaTeX}，生成完整的参考文献。
 
 
-\begin{figure}[htb]
+\begin{figure}[htb]\footnotesize
     \centering
     \includegraphics[width=0.5\textwidth]{figures/pass.png}
     \caption{测试}\label{fig:test}
@@ -98,21 +99,17 @@ With China aviation pioneer Mr Fung Joe guey named Beijing university of aeronau
 
 
 
-\begin{ThreePartTable}
-    
-
+\begin{ThreePartTable}\footnotesize
     \begin{TableNotes}
         \item[a] 测试
         \item[b] 证明表格注释可用
     \end{TableNotes}
-    \begin{longtable}{lll} 
+    \begin{longtable}{lll}\footnotesize\\
         \caption{傅里叶级数的奇偶对称性}\label{sheet:ft} \\ 
         \toprule    
         函数分类\tnote{a} & 三角级数性质\tnote{b} & 指数级数性质\\ 
         \midrule
         \endfirsthead
-        
-
         % \toprule
         \multicolumn{3}{c}{\textbf{\tabref{sheet:ft}}~\textbf{续}}\\
         \toprule
@@ -130,10 +127,11 @@ With China aviation pioneer Mr Fung Joe guey named Beijing university of aeronau
         \endlastfoot
         奇函数                                                                              & 只包含正弦函数分量                                                      & \(F(n \omega_1)\) 为纯虚数 相位谱只取\(\pm \dfrac{1}{2} \pi\) \\ 
         偶函数                                                                              & 只包含余弦函数分量                                                      & \(F(n \omega_1)\) 为实数 相位谱只取\(\pm  \pi\)             \\ 
-        \begin{tabular}[c]{@{}l@{}}奇谐函数\\\end{tabular} & \begin{tabular}[c]{@{}l@{}}只含有奇次谐波，\\ 不含偶次谐波与直流分量\end{tabular} &                                                     \\
-        \begin{tabular}[c]{@{}l@{}}偶谐函数\\\end{tabular}  & \begin{tabular}[c]{@{}l@{}}只含有次谐波与直流分量，\\ 不含有奇次谐波\end{tabular} &                    \\
+        奇函数                                                                              & 只包含正弦函数分量                                                      & \(F(n \omega_1)\) 为纯虚数 相位谱只取\(\pm \dfrac{1}{2} \pi\) \\ 
+        偶函数                                                                              & 只包含余弦函数分量                                                      & \(F(n \omega_1)\) 为实数 相位谱只取\(\pm  \pi\)             \\ 
+        奇函数                                                                              & 只包含正弦函数分量                                                      & \(F(n \omega_1)\) 为纯虚数 相位谱只取\(\pm \dfrac{1}{2} \pi\) \\ 
+        偶函数                                                                              & 只包含余弦函数分量                                                      & \(F(n \omega_1)\) 为实数 相位谱只取\(\pm  \pi\)             \\ 
     \end{longtable}
-
 \end{ThreePartTable}
 
 \subsection{致谢}
