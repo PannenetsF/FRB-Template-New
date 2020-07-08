@@ -87,9 +87,9 @@
 % 目录设置
 
 \RequirePackage{titletoc}
-\titlecontents{section}[2cm]{\vspace{2pt}}{\contentspush{{第\zhnumber {\thecontentslabel} 章}\quad}}{}{\titlerule*[8pt]{.}\contentspage}
-\titlecontents{subsection}[2.5cm]{\vspace{2pt}}{\contentspush{\thecontentslabel\hspace{0.8em}}}{}{\titlerule*[8pt]{.}\contentspage}
-\titlecontents{subsubsection}[3cm]{\vspace{2pt}}{\contentspush{\thecontentslabel\hspace{0.8em}}}{}{\titlerule*[8pt]{.}\contentspage}
+\titlecontents{section}[0.5cm]{\vspace{2pt}}{\contentspush{{第\zhnumber {\thecontentslabel} 章}\quad}}{}{\titlerule*[8pt]{.}\contentspage}
+\titlecontents{subsection}[1cm]{\vspace{2pt}}{\contentspush{\thecontentslabel\hspace{0.8em}}}{}{\titlerule*[8pt]{.}\contentspage}
+\titlecontents{subsubsection}[1.5cm]{\vspace{2pt}}{\contentspush{\thecontentslabel\hspace{0.8em}}}{}{\titlerule*[8pt]{.}\contentspage}
 
 % 图表标题设置
 \RequirePackage[font=small,labelfont={bf}]{caption}
@@ -178,6 +178,9 @@
   \newcommand{\cfs}{\normalfont}
 \fi
 
+% 字号设置
+\renewcommand{\normalsize}{\xiaosi}
+
 % 数学字体
 \RequirePackage{newtxtext}
 \RequirePackage{esint}
@@ -233,7 +236,8 @@
 % 引用环境
 \RequirePackage{natbib}
 \setlength{\bibsep}{0.0pt}
-\def\bibfont{\footnotesize}
+% \def\bibfont{\footnotesize}
+\def\bibfont{\normalsize}
 
 
 
