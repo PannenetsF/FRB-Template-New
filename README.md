@@ -22,6 +22,8 @@
 
 ## 编译方式
 
+请注意本步骤需要您先将相关字体复制到 `fonts` 文件夹内，请参考下一小节。
+
 - 通过 `xelatex -> bibtex -> xelatex * 2`
 - 直接 `latexmk -xelatex frb.tex` （简单，推荐）
 - 直接使用脚本/批处理文件
@@ -49,8 +51,8 @@
 │   ├── FZHTK.TTF
 │   ├── FZKTK.TTF
 │   ├── FZSSK.TTF
-│   ├── HWXW.TTF
-│   └── HWZS.TTF
+│   ├── HWXW.TTF （请自行复制到本文件夹并重命名）
+│   └── HWZS.TTF （请自行复制到本文件夹并重命名）
 ├── frbpaper.cls
 ├── frb.pdf
 ├── frbrefer.bib
@@ -61,6 +63,10 @@
 ├── LICENSE
 └── README.md
 ```
+
+## Bug 反馈
+
+请提 Issue （推荐） 或者邮件联系我： [pannenets.f@foxmail.com](mailto:pannenets.f@foxmail.com)
 
 ## License
 
