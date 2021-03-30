@@ -22,3 +22,7 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+# 版权问题
+fonts/HWXW.TTF 
+fonts/HWZS.TTF 
