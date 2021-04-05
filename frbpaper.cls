@@ -321,7 +321,7 @@
   \begin{center}
     \includegraphics[scale=1]{buaa.png}
   \end{center}
-  \vskip 5em%
+  \vskip 1em%
   \begin{center}%
   \let \footnote \thanks
     {\fontsize{21pt}{0}\bfseries\zhongsong \@title \par}%
