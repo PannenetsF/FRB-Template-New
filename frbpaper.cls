@@ -92,7 +92,7 @@
 \titlecontents{subsubsection}[1.5cm]{\vspace{2pt}}{\contentspush{\thecontentslabel\hspace{0.8em}}}{}{\titlerule*[8pt]{.}\contentspage}
 
 % 图表标题设置
-\RequirePackage[font=small,labelfont={bf}]{caption}
+\RequirePackage[font={small,bf},labelfont={bf}]{caption}
 \captionsetup[table]{skip=3pt}
 \captionsetup[figure]{skip=3pt}
 
