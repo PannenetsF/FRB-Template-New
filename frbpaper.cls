@@ -80,9 +80,9 @@
 
 % 章节标题设置
 \RequirePackage{titlesec}
-\titleformat{\section}[block]{\sanhao\heiti\centering}{第\sanhao\heiti\zhnum{section}章、}{0pt}{\vspace{0.5em}}[\vspace{0.5em}]
-\titleformat{\subsection}[hang]{\sihao\heiti}{\heiti\sihao\arabic{section}.\heiti\sihao\arabic{subsection}~}{0pt}{\vspace{0.5em}}[\vspace{0.5em}]
-\titleformat{\subsubsection}[hang]{\xiaosi\heiti}{\heiti\xiaosi\arabic{section}.\heiti\xiaosi\arabic{subsection}.\heiti\xiaosi\arabic{subsubsection}~}{0pt}{\vspace{0.5em}}[\vspace{0.5em}]
+\titleformat{\section}[block]{\sanhao\heiti\centering}{第\sanhao\heiti\zhnum{section}章、}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
+\titleformat{\subsection}[hang]{\sihao\heiti}{\heiti\sihao\arabic{section}.\heiti\sihao\arabic{subsection}~}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
+\titleformat{\subsubsection}[hang]{\xiaosi\heiti}{\heiti\xiaosi\arabic{section}.\heiti\xiaosi\arabic{subsection}.\heiti\xiaosi\arabic{subsubsection}~}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
 
 % 目录设置
 
@@ -323,14 +323,14 @@
   \end{center}
   \vskip 1em%
   \begin{center}%
-  \let \footnote \thanks
-    {\fontsize{21pt}{0}\bfseries\zhongsong \@title \par}%
+  % \let \footnote \thanks
+    {\erhao\bfseries\zhongsong \@title \par}%
     \vskip 1.5em%
 
     \IfEmpty\subtitle
     \else
       \begin{flushright}
-        {\fontsize{16pt}{0}\bfseries\xinwei——\the\subtitle \par}%
+        {\sanhao\bfseries\xinwei——\the\subtitle \par}%
       \end{flushright}
     \fi
 
