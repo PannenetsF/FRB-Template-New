@@ -213,6 +213,8 @@
   \newtheorem{case}{\normalfont\bfseries 案例} %
   \renewcommand*{\proofname}{\normalfont\bfseries 证明} %
   \renewcommand\contentsname{\heiti 目录}
+  \renewcommand{\listfigurename}{\heiti 插图索引}
+  \renewcommand{\listtablename}{\heiti 表格索引}
   \renewcommand\refname{\heiti 参考文献} %
   \renewcommand\figurename{\textbf{图}} %
   \renewcommand\tablename{\textbf{表}}%
