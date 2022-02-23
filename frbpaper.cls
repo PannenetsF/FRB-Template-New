@@ -80,7 +80,7 @@
 
 % 章节标题设置
 \RequirePackage{titlesec}
-\titleformat{\section}[block]{\sanhao\heiti\centering}{第\sanhao\heiti\zhnum{section}章、}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
+\titleformat{\section}[block]{\sihao\heiti}{\sihao\heiti\zhnum{section}、}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
 \titleformat{\subsection}[hang]{\sihao\heiti}{\heiti\sihao\arabic{section}.\heiti\sihao\arabic{subsection}~}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
 \titleformat{\subsubsection}[hang]{\xiaosi\heiti}{\heiti\xiaosi\arabic{section}.\heiti\xiaosi\arabic{subsection}.\heiti\xiaosi\arabic{subsubsection}~}{0pt}{\vspace{0.5ex}}[\vspace{0.5ex}]
 
@@ -148,12 +148,14 @@
     \setCJKfamilyfont{zhkai}[Path=fonts/]{FZKTK.TTF}
     \setCJKfamilyfont{zhfs}[Path=fonts/]{FZFSK.TTF}
     \setCJKfamilyfont{hwxw}[Path=fonts/]{HWXW.TTF}
+    \setCJKfamilyfont{hwxk}[Path=fonts/]{HWXK.TTF}
     \setCJKfamilyfont{hwzs}[Path=fonts/]{HWZS.TTF}
     \newcommand*{\songti}{\CJKfamily{zhsong}}
     \newcommand*{\heiti}{\CJKfamily{zhhei}}
     \newcommand*{\kaishu}{\CJKfamily{zhkai}}
     \newcommand*{\fangsong}{\CJKfamily{zhfs}}
     \newcommand*{\xinwei}{\CJKfamily{hwxw}}
+    \newcommand*{\xingkai}{\CJKfamily{hwxk}}
     \newcommand*{\zhongsong}{\CJKfamily{hwzs}}
   \AfterEndPreamble{
     \setlength\parindent{2\ccwd}
@@ -215,7 +217,7 @@
   \renewcommand\contentsname{\heiti 目录}
   \renewcommand{\listfigurename}{\heiti 插图索引}
   \renewcommand{\listtablename}{\heiti 表格索引}
-  \renewcommand\refname{\heiti 参考文献} %
+  \renewcommand\refname{\heiti } %
   \renewcommand\figurename{\textbf{图}} %
   \renewcommand\tablename{\textbf{表}}%
   % \renewcommand\algorithmname{\textbf{算法}}%
@@ -263,15 +265,30 @@
 \newtoks\version
 \newtoks\institute
 \newtoks\headofpaper
+\newtoks\stucode
+\newtoks\stumajor
+\newtoks\stusupervisor
+\newtoks\stuschool
+\newtoks\stusupervisorin
+\newtoks\stusupervisorout
+\newtoks\stusupervisorouttitle
+\newtoks\stusupervisoroutposition
+\newtoks\stusupervisoroutphone
+\newtoks\stusupervisoroutmail
 
 % 页眉设置
 
 \RequirePackage{fancyhdr}
 \newcommand{\makeabstract}{\pagenumbering{roman}\songti}
 
-\newcommand{\makemain}{\pagenumbering{arabic}\setcounter{page}{1}\renewcommand{\headrulewidth}{0.4pt}\pagestyle{fancy}
-\fancyhead[C]{\xiaowu\songti\the\headofpaper
-}}
+\newcommand{\makemain}{
+  \pagenumbering{arabic}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \pagestyle{fancy}
+  \fancyhead[C]{\xiaowu\songti\the\headofpaper}
+  \clearpage
+  \setcounter{page}{1}
+}
 
 
 
@@ -295,12 +312,12 @@
       \global\@topnum\z@   % Prevents figures from going at top of page.
       \@maketitle
     \fi
-    \thispagestyle{plain}\@thanks
+    % \thispagestyle{empty}
   \endgroup
   \setcounter{footnote}{0}%
   \global\let\thanks\relax
   \global\let\maketitle\relax
-  \global\let\@maketitle\relax
+  \global\let\@maketitle\ubtielax
   \global\let\@thanks\@empty
   \global\let\@author\@empty
   \global\let\@ELEGANT@version\@empty
@@ -318,30 +335,38 @@
   \rhead{}
   \renewcommand{\headrulewidth}{0pt}
   \null
-  \includegraphics[scale=1]{buaa-symbol.png}
-  \vspace{7em}
+  % \includegraphics[scale=1]{buaa-symbol.png}
+  % \vspace{7em}
   \begin{center}
     \includegraphics[scale=1]{buaa.png}
   \end{center}
   \vskip 1em%
   \begin{center}%
   % \let \footnote \thanks
-    {\erhao\bfseries\zhongsong \@title \par}%
+    {\chuhao\xingkai \@title \par}%
     \vskip 1.5em%
 
     \IfEmpty\subtitle
     \else
-      \begin{flushright}
-        {\sanhao\bfseries\xinwei——\the\subtitle \par}%
-      \end{flushright}
+      \begin{center}
+        {\yihao\heiti\the\subtitle \par}%
+      \end{center}
     \fi
 
     {
       \Large
-      \lineskip .5em%
-      \begin{tabular}[t]{c}%
-        \@author\\[1ex]
-      \end{tabular}\par}
+      \lineskip 15em%
+      % \begin{tabular}[t]{c}%
+      %   \heiti\sihao\@author\\[1ex]
+      %   \heiti\sihao\the\stucode\\[1ex]
+      % \end{tabular}\par}
+      \begin{tabular}{l@{\quad}l}
+        \makebox[8em][s]{\heiti\sihao 姓名} & \heiti\sihao \@author\\
+        \makebox[8em][s]{\heiti\sihao 学号} & \heiti\sihao \the\stucode\\
+        \makebox[8em][s]{\heiti\sihao 专业} & \heiti\sihao \the\stumajor\\
+        \makebox[8em][s]{\heiti\sihao 指导教师} & \heiti\sihao \the\stusupervisor\\
+        \makebox[8em][s]{\heiti\sihao 培养院系} & \heiti\sihao \the\stuschool\\
+    \end{tabular}\par}
       \Large\normalfont\citshape\the\institute%
 \vskip 0.5ex%
 \IfEmpty\version
@@ -352,11 +377,6 @@
   \end{center}%
   \par
   \vspace*{\fill}
-  \ifx\@date\empty
-  \else
-    \vskip 0.1em%
-    \centerline{\Large\heiti\@date}%
-  \fi
   \setcounter{page}{0} 
   \thispagestyle{empty}
   \clearpage
