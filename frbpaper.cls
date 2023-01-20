@@ -184,6 +184,7 @@
 
 % 数学字体
 \RequirePackage{newtxtext}
+\defaultfontfeatures{}
 \RequirePackage{esint}
 
 % 页码设置 - 字体
